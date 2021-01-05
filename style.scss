@@ -1,3 +1,15 @@
+/*colors*/
+$green: rgb(142, 191, 172);
+$rose: rgb(200, 144, 131);
+$roselight: rgb(212, 179, 171);
+$grey: rgb(41, 41, 41);
+$greylight: rgb(117, 116, 116);
+$bg: rgb(25, 25, 25);
+
+body {
+    position: relative;
+}
+/*Animacion principal*/
 @mixin animation($animate...) {
     $max: length($animate);
     $animations: '';
@@ -12,7 +24,6 @@
     -o-animation: $animations;
     animation: $animations;
     }
-
 @mixin transition($args...) {
     -webkit-transition: $args;
     -moz-transition: $args;
@@ -20,7 +31,6 @@
     -o-transition: $args;
     transition: $args;
 }
-
 @mixin keyframes($animationName) {
     @-webkit-keyframes #{$animationName} {
         @content;
@@ -36,19 +46,10 @@
     }
 }
 
-//theme
-$yellow:rgb(248, 232, 5);
-$dark41: rgb(41, 41, 41);
-$bg: rgb(25, 25, 25);
-$lines: rgb(117, 116, 116);
-body {
-    position: relative;
-}
-
-
 .splash {
     background-color: $bg;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     position: relative;
     width: 100%;
     height: 500px;
@@ -79,7 +80,7 @@ body {
         bottom: -5px;
         width: 20px;
         height: 1px;
-        background-color: $lines;
+        background-color: $greylight;
         content: "";
         }
         &:after {
@@ -89,13 +90,13 @@ body {
         top: -10px;
         width: 20px;
         height: 1px;
-        background-color: $lines;
+        background-color: $greylight;
         content: "";
         will-change: width;
         }
         p{
             padding: 0px;
-            margin: 00px 0 0px -24px;
+            margin: 0px 0px 0px 0px;
             text-align: center;
         }
     }
@@ -116,33 +117,11 @@ body {
             rect {
                 width: 100%;
                 height: 100%;
-                fill: $yellow;
+                fill: $roselight;
                 stroke: 0;
                 -webkit-clip-path: polygon(45vw 30vh, 55vw 30vh, 55vw 40vh, 45vw 40vh);
                 clip-path: polygon(45vw 30vh, 55vw 30vh, 55vw 40vh, 45vw 40vh);
                 @include animation('expand .7s ease-in forwards 2.7s');
-            }
-        }
-    }
-    &_minimize {
-        position: absolute;
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 4;
-        svg {
-        width: 100%;
-        height: 100%;
-        -webkit-backface-visibility: visible;
-        backface-visibility: visible;
-            rect {
-                width: 100%;
-                height: 100%;
-                -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
-                clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
-                @include animation('scale .2s ease-out forwards 1s, hide 1.3s ease-out forwards 1.2s');
             }
         }
     }
@@ -154,13 +133,13 @@ body {
         margin: 0;
         width: 100%;
         height: 100px;
-        top: 35%;
+        top: 25%;
         left: 30%;
         font-size: 48px;
         font-weight: 500;
-        font-family: 'Ubuntu', sans-serif;
-        color: $dark41;
-        text-shadow: 5px 5px 5px #bb9f03;
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        text-shadow: 5px 5px 5px $greylight;
         p {
             margin: 20px 0px;
             white-space: nowrap;
@@ -181,37 +160,31 @@ body {
         clip-path: polygon(45vw 30vh, 55vw 30vh, 55vw 40vh, 45vw 40vh);
     }
 }
-
 @include keyframes(hide) {
     100% {
         fill: transparent;
     }
 }
-
 @include keyframes (off) {
     100% {
         opacity: 0;
     }
 }
-
 @include keyframes (on) {
     100% {
         opacity: 1;
     }
 }
-
 @include keyframes (logo) {
     100% {
-        color: $dark41;
+        color: $grey;
     }
 }
-
 @include keyframes (type) {
     0% {
         width: 0;
     }
 }
-
 @include keyframes (type2) {
     0% {
         width: 0;
@@ -233,7 +206,7 @@ body {
     50% {
         -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 40vh, 45vw 40vh);
         clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 40vh, 45vw 40vh);
-        fill: $yellow;
+        fill: $roselight;
     }
     75% {
         -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 55vw 40vh, 0vw 100vh);
@@ -243,6 +216,6 @@ body {
     100% {
         -webkit-clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
         clip-path: polygon(0vw 0vh, 100vw 0vh, 100vw 100vh, 0vw 100vh);
-        fill: $yellow;
+        fill: $roselight;
     }
 }
