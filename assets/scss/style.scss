@@ -1,0 +1,66 @@
+@import 'var-mixin';
+
+
+
+body {
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+    color: $grey;
+}
+.section{
+    background-image: url(../../img/pic-one.jpg);
+    height: 150px;
+    margin-top: 2rem;
+}
+.sectionAbout{
+    margin: 2rem 0rem;
+    .title{
+        font-family: 'Dancing Script', cursive;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $green;
+    }
+    .about{
+        margin-top: 2rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        .about__text{
+            margin: 0rem 2rem;
+        }
+    }
+}
+.services{
+    margin: 2rem 0rem;
+    .title{
+        font-family: 'Dancing Script', cursive;
+        font-weight: 600;
+        font-size: 2.5rem;
+        text-align: center;
+        color: $green;
+    }
+    .blockServices{
+        height: 500px;
+        background-image: url(../../img/services.jpg);
+        background-position: center;
+        background-size: cover;
+        .services__text{
+            position: relative;
+            top: 25%;
+            left: 40%;
+            width: 50%;
+            ul{
+                line-height: 4rem;
+                list-style-type: none;
+                font-size: 1.2rem;
+                i{
+                    color: $rose;
+                    padding: 0rem 1rem;
+                }
+            }
+        }
+    }
+}

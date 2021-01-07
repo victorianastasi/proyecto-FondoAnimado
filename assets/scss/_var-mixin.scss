@@ -6,9 +6,6 @@ $grey: rgb(41, 41, 41);
 $greylight: rgb(117, 116, 116);
 $bg: rgb(25, 25, 25);
 
-body {
-    position: relative;
-}
 /*Animacion principal*/
 @mixin animation($animate...) {
     $max: length($animate);
@@ -135,11 +132,15 @@ body {
         height: 100px;
         top: 25%;
         left: 30%;
-        font-size: 48px;
+        font-size: 40px;
         font-weight: 500;
         font-family: 'Raleway', sans-serif;
         color: white;
         text-shadow: 5px 5px 5px $greylight;
+        .text__title{
+            font-family: 'Dancing Script', cursive;
+            font-size: 70px;
+        }
         p {
             margin: 20px 0px;
             white-space: nowrap;
